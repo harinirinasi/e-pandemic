@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Peste|Madagascar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/graph.css">
+</head>
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              <a class="brand" href="#">IMTICIA5.N°06.Sidonie</a>
+        
+             <div class="nav-collapse">
+             <ul class="nav">
+                <li><a href="#"></a></li>
+                <li ><a href="index.html">Peste</a></li>
+                <li><a href="index.html">Evaluation</a></li>
+                <li><a href="index.html">Symptômes et traitements</a></li>
+                <li><a href="index.html">Prévention et traitement</a></li>
+                <li><a href="index.html">Facteurs de risque</a></li>
+                <li><a href="vaccins.html">Vaccins</a></li>
+                <li class="active"><a href="affection.html">Affections</a></li>
+             </ul>
+             </div>
+            </div>
+        </nav>
+    </div>
+    <div >
+         <div class="span4" id="menu">
+         <table class="w3-table  w3-border w3-bordered w3-card-4 w3-hoverable">
+         <thead>
+           <tr>
+             <th><a href="#">Dernières preuves</a></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td><a href="index.html">Peste à Madagascar</td>
+           </tr>
+           <tr>
+             <td><a href="index.html">Evaluation par ville</td>
+           </tr>
+           <tr>
+           <td><a href="index.html">Les symptômes</td>
+           </tr>
+           <tr>
+           <td><a href="index.html">Les facteurs de risque</td>
+           </tr>
+           <tr>
+           <td><a href="index.html">Prévention et traitement</td>
+           </tr>
+           <tr>
+             <td><a href="vaccins.html">Listes des vaccins</a></td>
+           </tr>
+           <tr>
+             <td><a href="affection.html">Affections</a></td>
+           </tr>
+         </tbody>
+       </table>
+         </div>
+         <div class="span10">
+         <script src="js/highcharts.js"></script>
+         <script src="js/exporting.js"></script>
+         <script src="js/export-data.js"></script>
+         <script src="js/accessibility.js"></script>
+         
+         <figure class="highcharts-figure">
+             <div id="container"></div>
+             
+         </figure>
+         
+		<script type="text/javascript">
+        var chart = Highcharts.chart('container', {
+        
+            chart: {
+                type: 'column'
+            },
+        
+            title: {
+                text: 'Evolutions par rapport aux enfants,femmes et les hommes'
+            },
+        
+            subtitle: {
+                text: ''
+            },
+        
+            legend: {
+                align: 'right',
+                verticalAlign: 'middle',
+                layout: 'vertical'
+            },
+        
+            xAxis: {
+                categories: ['2017', '2019', '2020'],
+                labels: {
+                    x: -10
+                }
+            },
+        
+            yAxis: {
+                allowDecimals: false,
+                title: {
+                    text: 'Nombre'
+                }
+            },
+        
+            series: [{
+                name: 'Enfants',
+                data: [10, 5, 3]
+            }, {
+                name: 'Femmes',
+                data: [6, 8, 6]
+            }, {
+                name: 'Hommes',
+                data: [8, 5, 10]
+            }],
+        
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            align: 'center',
+                            verticalAlign: 'bottom',
+                            layout: 'horizontal'
+                        },
+                        yAxis: {
+                            labels: {
+                                align: 'left',
+                                x: 0,
+                                y: -5
+                            },
+                            title: {
+                                text: null
+                            }
+                        },
+                        subtitle: {
+                            text: null
+                        },
+                        credits: {
+                            enabled: false
+                        }
+                    }
+                }]
+            }
+        });
+        
+        document.getElementById('small').addEventListener('click', function () {
+            chart.setSize(400);
+        });
+        
+        document.getElementById('large').addEventListener('click', function () {
+            chart.setSize(600);
+        });
+        
+        document.getElementById('auto').addEventListener('click', function () {
+            chart.setSize(null);
+        });
+        
+                </script>
+                <hr/>
+                
+        </div> 
+          
+       
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
